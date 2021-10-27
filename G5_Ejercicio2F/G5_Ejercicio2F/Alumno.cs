@@ -16,7 +16,10 @@ namespace G5_Ejercicio2F
         private string correo;
         private string responsable;
         private string carnet;
-        
+        private double periodo1;
+        private double periodo2;
+        private double periodo3;
+        private double prom;
         //Propiedades con validación
         public string Nombre
         {
@@ -116,6 +119,50 @@ namespace G5_Ejercicio2F
 
                 }
             }
+        }
+
+        public double Periodo1
+        {
+            get { return periodo1; }
+            set
+            {
+                periodo1 = value;
+                if (periodo1 > 10)
+                {
+                    throw new Exception("La notas solamente existen en el rango de 0 a 10");
+                }
+            }
+        }
+
+        public double Periodo2
+        {
+            get { return periodo2; }
+            set
+            {
+                periodo2 = value;
+                if (periodo2 > 10)
+                {
+                    throw new Exception("La notas solamente existen en el rango de 0 a 10");
+                }
+            }
+        }
+
+        public double Periodo3
+        {
+            get { return periodo3; }
+            set
+            {
+                if (periodo3 > 10)
+                {
+                    throw new Exception("La notas solamente existen en el rango de 0 a 10");
+                }
+            }
+        }
+
+        public double Prom
+        {
+            get { return prom; }
+            set { prom = value; }
         }
     }
 }
