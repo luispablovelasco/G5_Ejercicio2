@@ -147,5 +147,10 @@ namespace G5_Ejercicio2F
                 MessageBox.Show("Solo se admiten datos numéricos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
+        private void FrmPromedio_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

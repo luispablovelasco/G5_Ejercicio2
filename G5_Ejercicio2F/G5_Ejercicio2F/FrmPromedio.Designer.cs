@@ -150,6 +150,7 @@
             this.Name = "FrmPromedio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Promedio";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmPromedio_FormClosed);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorpro)).EndInit();

@@ -77,6 +77,7 @@
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(261, 20);
             this.txtnombre.TabIndex = 3;
+            this.txtnombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnombre_KeyPress);
             // 
             // label3
             // 
@@ -118,6 +119,7 @@
             this.txtcorreo.Name = "txtcorreo";
             this.txtcorreo.Size = new System.Drawing.Size(210, 20);
             this.txtcorreo.TabIndex = 8;
+            this.txtcorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcorreo_KeyPress);
             // 
             // txtrespon
             // 
@@ -125,6 +127,7 @@
             this.txtrespon.Name = "txtrespon";
             this.txtrespon.Size = new System.Drawing.Size(237, 20);
             this.txtrespon.TabIndex = 9;
+            this.txtrespon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtrespon_KeyPress);
             // 
             // label6
             // 
@@ -157,6 +160,7 @@
             this.btningresar.TabIndex = 12;
             this.btningresar.Text = "Ingresar";
             this.btningresar.UseVisualStyleBackColor = false;
+            this.btningresar.Click += new System.EventHandler(this.btningresar_Click);
             // 
             // groupBox1
             // 

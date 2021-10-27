@@ -21,6 +21,21 @@ namespace G5_Ejercicio2F
         private double periodo3;
         private double prom;
         //Propiedades con validación
+
+
+        public string Carnet
+        {
+            get { return carnet; }
+            set
+            {
+                carnet = value;
+                if (carnet == "")
+                {
+                    throw new Exception("Debe de llenar esta espacio");
+                }
+            }
+        }
+
         public string Nombre
         {
             get { return nombre; }
@@ -61,7 +76,7 @@ namespace G5_Ejercicio2F
 
                 if (nacimiento > System.DateTime.Now.Date)
                 {
-                    throw new Exception("Ese nacimiento aun no ha ocurrido");
+                    throw new Exception("Ese nacimiento no valida");
                 }
             }
         }
@@ -72,23 +87,29 @@ namespace G5_Ejercicio2F
             set
             {
                 correo = value;
-
-                string expresion = "^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9- ]+)*(.[a - z]{ 2,4})$";
-                if (Regex.IsMatch(correo, expresion))
+                if (correo == "")
                 {
-                    if (Regex.Replace(correo, expresion, string.Empty).Length == 0)
-                    {
+                    throw new Exception("No puede dejar en blanco este espacio");
+                }
 
+                    string expresion = "^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9- ]+)*(.[a - z]{ 2,4})$";
+
+                    if (Regex.IsMatch(correo, expresion))
+                    {
+                        if (Regex.Replace(correo, expresion, string.Empty).Length == 0)
+                        {
+
+                        }
+                        else
+                        {
+                            throw new Exception("Direccion de correo no valida");
+                        }
                     }
                     else
                     {
                         throw new Exception("Direccion de correo no valida");
                     }
-                }
-                else
-                {
-                    throw new Exception("Direccion de correo no valida");
-                }
+                
             }
         }
 
@@ -152,6 +173,7 @@ namespace G5_Ejercicio2F
             get { return periodo3; }
             set
             {
+                periodo3 = value;
                 if (periodo3 > 10)
                 {
                     throw new Exception("La notas solamente existen en el rango de 0 a 10");
