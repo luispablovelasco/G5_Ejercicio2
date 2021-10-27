@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.mskboxcarnet = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,7 +43,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btningresar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.errorpro = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorpro)).BeginInit();
             this.SuspendLayout();
             // 
             // mskboxcarnet
@@ -120,6 +123,7 @@
             this.txtcorreo.Size = new System.Drawing.Size(210, 20);
             this.txtcorreo.TabIndex = 8;
             this.txtcorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcorreo_KeyPress);
+            this.txtcorreo.Leave += new System.EventHandler(this.txtcorreo_Leave);
             // 
             // txtrespon
             // 
@@ -172,6 +176,10 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
             // 
+            // errorpro
+            // 
+            this.errorpro.ContainerControl = this;
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -198,6 +206,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorpro)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,6 +228,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btningresar;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ErrorProvider errorpro;
     }
 }
 
